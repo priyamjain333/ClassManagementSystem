@@ -1,0 +1,80 @@
+
+<div class="card bg-secondary">
+  <div class="card-body">
+    <div class="card bg-light">
+      <div class="card-header">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+
+          <ul class="navbar-nav">
+            <li class="nav-item">
+
+              <a class="nav-link" href="/myProfile/{{outputrollnumber}}">View Profile</a>
+            </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="/updateProfile/{{outputrollnumber}}">Update Profile</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/login/{{outputrollnumber}}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/logout/">Logout</a>
+
+              </li>
+
+            </ul>
+          </nav>
+      </div>
+      <div class="card-body">
+        <h4><strong>{{viewTitle}}</strong></h4>
+        <form action="/updatedform/{{outputrollnumber}}" method="POST">
+          <!--input type="hidden" name="urlrollnumber" value="{{urlrollnumber}}" -->
+        <input type="hidden" name="_id" value="{{studentobject._id}}" >
+          <div class="form-group">
+            <label>Roll Number</label>
+            <p>{{studentobject.sroll}}<p>
+            <!--input type="text" name="sroll" class="form-control" placeholder="Roll Number" value="{{studentobject.sroll}}"-->
+          </div>
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" name="sname" class="form-control" placeholder="Full Name" value="{{studentobject.sname}}" >
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="text" name="semail" class="form-control" placeholder="Email" value="{{studentobject.semail}}">
+            <!--div class="text-danger">{{studentobject.emailError}}</div-->
+          </div>
+          <div class="form-group">
+            <label>Batch</label>
+            <input type="text" name="sbatch" class="form-control" placeholder="Batch" value="{{studentobject.sbatch}}">
+            <!--div class="text-danger">{{studentobject.emailError}}</div-->
+          </div>
+          <div class="form-group">
+            <label>Phone</label>
+            <input type="text" name="sphone" class="form-control" placeholder="Phone" value="{{studentobject.sphone}}">
+            <!--div class="text-danger">{{studentobject.emailError}}</div-->
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <div class="form-group">
+                <label>Area</label>
+                <input type="text" name="saddress[area]" class="form-control" placeholder="Area" value="{{addressobject.area}}">
+              </div>
+              <div class="form-group">
+                <label>City</label>
+                <input type="text" name="saddress[city]" class="form-control" placeholder="City" value="{{addressobject.city}}">
+              </div>
+              <div class="form-group">
+                <label>State</label>
+                <input type="text" name="saddress[state]" class="form-control" placeholder="State" value="{{addressobject.state}}">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-dark"><i class="fa fa-database"></i>Submit</button>
+            <!--a class="btn btn-secondary" href="studentdetails/list"><i class="fa fa-list-alt"></i>View All</a-->
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

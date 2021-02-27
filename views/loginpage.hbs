@@ -1,0 +1,50 @@
+
+{{# if success}}
+   <section class="success">
+    <h2>Successful validation!</h2>
+    <a></a>
+    <button type="submit" class="btn btn-clg">MyForm</button>
+    <!--a class="btn btn-secondary" href="studentdetails/list"><i class="fa fa-list-alt"></i>MyForm</a-->
+  </section>
+  {{else}}
+    <div class="row">
+      <div class="col-lg-2">
+
+      </div>
+      <div class="col-lg-8">
+        <div class="card" style="padding: 3%;">
+          <div class="card-header" style="text-align: center;">
+              <h3>{{viewTitle}}</h3>
+          </div>
+          <div class="card-body" style="color: red;">
+                              {{# if errors}}
+                        <section class="errors">
+                          <ul>
+                            {{# each errors }}
+                              <li> {{this.msg}}</li>
+                            {{/each}}
+                          </ul>
+                        </section>
+                      {{/ if}}
+                      <form action="/login/submit" method="post">
+                  <div class="form-group">
+                    <label for="rollnumber">Roll Number</label>
+                    <input type="text" id="rollnumberfield" name="rollnumber" class="form-control" >
+                  </div>
+                  <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="passwordfield" name="password" class="form-control" >
+                  </div>
+                  <button class="btn btn-lg btn-danger" type="submit">Login</button>
+                </form>
+          </div>
+
+        </div>
+      </div>
+      <div class="col-lg-2">
+
+      </div>
+
+    </div>
+  
+{{/if}}

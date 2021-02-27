@@ -1,0 +1,39 @@
+<h3><a class="btn btn-secondary" href="/studentdetails"><i class="fa fa-plus"></i>Create New</a>Student Details</h3>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Roll Number</th>
+			<th>Name</th>
+			<th>Email</th>
+			<th></th>
+		</tr>
+	</thead>
+	<!--tbody>
+		{{#each list}}
+		<tr>
+			<td>{{this.sroll}}</td>
+			<td>{{this.sname}}</td>
+			<td>{{this.semail}}</td>
+			<td>
+				<a href="/studentdetails/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+				<a href="/studentdetails/delete/{{this._id}}"
+        onclick="return confirm('Are you sure you want to delete the record?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+			</td>
+		</tr>
+		{{/each}}
+	</tbody-->
+	<tbody>
+
+		<tr>
+			<td>{{this.sroll}}</td>
+			<td>{{this.sname}}</td>
+			<td>{{this.semail}}</td>
+			<td>
+				<a href="/studentdetails/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+				<a href="/studentdetails/delete/{{this._id}}"
+				onclick="return confirm('Are you sure you want to delete the record?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+			</td>
+		</tr>
+
+	</tbody>
+</table>

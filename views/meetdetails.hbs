@@ -1,0 +1,53 @@
+
+<div class="row">
+  <div class="col-lg-1">
+
+  </div>
+  <div class="col-lg-10">
+    <div class="card" style="padding: 3%;">
+      <div class="card-header" style="text-align: center;">
+        <h3>{{viewTitle}}</h3>
+      </div>
+      <div class="card-body">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th style="color: black;">Date</th>
+              <th style="color: black;">Batch</th>
+              <th style="color: black;">Remarks</th>
+              <th style="color: black;">Achievements</th>
+              <th>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each list}}
+
+            <tr>
+              <td>{{this.mdate}}</td>
+              <td>{{this.mbatch}}</td>
+              <td>{{this.mremarks}}</td>
+              <td>{{this.machieve}}</td>
+              <td>
+                <a href="/meetid/{{this.mdate}}"><i  class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="/meetdelete/{{this._id}}"
+                onclick="return confirm('Are you sure you want to delete the record?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+              </td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+      <div class="card-footer">
+
+      </div>
+    </div>
+    
+  </div>
+  <div class="col-lg-1">
+    
+  </div>
+</div>
+
+
+

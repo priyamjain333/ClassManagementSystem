@@ -1,0 +1,89 @@
+
+<!--div class="row">
+  <a href="/myProfile/{{outputrollnumber}}">View Profile</a>
+  <a href="/updateProfile/{{outputrollnumber}}">Update Profile</a>
+  <p><a href="/logout/">Logout</a></p>
+</div-->
+
+
+<!--div class="row">
+  <a href="/myProfile/{{outputrollnumber}}">View Profile</a>
+  <a href="/updateProfile/{{outputrollnumber}}">Update Profile</a>
+  <p><a href="/logout/">Logout</a></p>
+</div-->
+
+
+
+
+<div class="card bg-secondary">
+  <div class="card-body">
+    <div class="card bg-light">
+      <div class="card-header">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+
+          <ul class="navbar-nav">
+            <li class="nav-item">
+
+              <a class="nav-link" href="/myProfile/{{outputrollnumber}}">View Profile</a>
+            </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="/updateProfile/{{outputrollnumber}}">Update Profile</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/login/{{outputrollnumber}}">Home</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="/logout/">Logout</a>
+
+              </li>
+
+            </ul>
+          </nav>
+      </div>
+      <div class="card-body">
+        <h4>{{viewTitle}}</h4>
+        <label><strong>Roll Number</strong></label>
+        <!--input type="text" name="sroll" class="form-control" placeholder="Roll Number" value="{{studentobject.sroll}}"-->
+        <p>{{studentobject.sroll}}</p>
+        <p><strong>Batch</strong></p>
+        <p>{{studentobject.sbatch}}</p>
+        <!--div class="text-danger">{{studentobject.emptyRollNumber}}</div-->
+        <form action="/studentdetails" method="POST">
+        <input type="hidden" name="_id" value="{{studentobject._id}}" >
+        	<div class="form-group">
+        		<label><strong>Full Name</strong></label>
+        		<!--input type="text" name="sname" class="form-control" placeholder="Full Name" value="{{studentobject.sname}}" -->
+            <p>{{studentobject.sname}}</p>
+        	</div>
+        	<div class="form-group">
+        		<label><strong>Email</strong></label>
+        		<!--input type="text" name="semail" class="form-control" placeholder="Email" value="{{studentobject.semail}}"-->
+            <p>{{studentobject.semail}}</p>
+        		<!--div class="text-danger">{{studentobject.emailError}}</div-->
+        	</div>
+          <h6>Address Details:</h6>
+          <div class="form-group">
+        		<label><strong>Area</strong></label>
+        		<!--input type="text" name="semail" class="form-control" placeholder="Email" value="{{studentobject.semail}}"-->
+            <p>{{saddressobject.area}}</p>
+        		<!--div class="text-danger">{{studentobject.emailError}}</div-->
+        	</div>
+          <div class="form-group">
+        		<label><strong>City</strong></label>
+        		<!--input type="text" name="semail" class="form-control" placeholder="Email" value="{{studentobject.semail}}"-->
+            <p>{{saddressobject.city}}</p>
+        		<!--div class="text-danger">{{studentobject.emailError}}</div-->
+        	</div>
+          <div class="form-group">
+        		<label><strong>State</strong></label>
+        		<!--input type="text" name="semail" class="form-control" placeholder="Email" value="{{studentobject.semail}}"-->
+            <p>{{saddressobject.state}}</p>
+        		<!--div class="text-danger">{{studentobject.emailError}}</div-->
+        	</div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

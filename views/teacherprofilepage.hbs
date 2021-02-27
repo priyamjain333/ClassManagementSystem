@@ -1,0 +1,59 @@
+<div class="row">
+  <div class="col-lg-3">
+
+  </div>
+  <div class="col-lg-6">
+    <div class="card" style="padding: 4%;">
+      <div class="card-header" style="text-align: center;">
+        <h3>{{viewTitle}}</h3>
+        <label><strong> Teacher Id</strong>  {{teacherobject.tid}}</label>
+      </div>
+      <div class="card-body">
+        <table class="table-dark" style="padding: 5%;">
+          <tr>
+            <td style="padding: 10%;">
+              <label><strong>Name</strong> </label>
+            </td>
+            <td style="padding: 10%;">
+              {{teacherobject.tname}}
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 10%;">
+              <label><strong>Batches</strong> </label>
+            </td>
+            <td style="padding: 10%;">
+              {{#each list}}
+                {{this.bname}}
+            <!--a href="/studentdetails/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a-->
+            <!--a href="/studentdetails/delete/{{this._id}}"
+            onclick="return confirm('Are you sure you want to delete the record?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+          </td-->
+        {{/each}}
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 10%;">
+              <label><strong>Department</strong></label>
+            </td>
+            <td style="padding: 10%;">
+              {{teacherobject.tdept}}
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:10%;">
+              <label><strong>Email</strong></label>
+            </td>
+            <td style="padding:10%;">
+              {{teacherobject.temail}}
+            </td>
+          </tr>
+        </table>
+        <!--input type="text" name="sroll" class="form-control" placeholder="Roll Number" value="{{studentobject.sroll}}"-->
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3">
+  </div>
+</div>
+

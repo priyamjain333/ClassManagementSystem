@@ -1,0 +1,56 @@
+
+
+  <!--p><a href="/myProfiletr/{{outputid}}">My Profile</a></p>
+  <p><a href="/updateProfiletr/{{outputid}}">Update Profile</a></p>
+  <p><a href="/trlogin/{{outputid}}">Home</a></p>
+  <p><a href="/logout/">Logout</a></p-->
+<!--h4>{{viewTitle}}</h4-->
+<div class="container-fluid">
+  <div class="row">
+        <div class="col-lg-3">
+
+        </div>
+        <div class="col-lg-6">
+            <div class="card" style="text-align:center;padding:3%;">
+                  <div class="card-body">
+                    <h3>Profile Record</h3>
+                    <h6>Teacher id: {{outputid}}</h6>
+              <form action="/showstdata/{{outputid}}" method="post">
+                <div class="form-group">
+                  <label for="bacthlist">Select batch</label>
+                  <select class="form-control btn dropdown-toggle" id="batchlist" name="batchlist">
+                    {{# each list}}
+                    <option>{{this.bname}}</option>
+                    {{/ each}}
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-danger btn-lg ">OK</button>
+              </form>
+                  </div>
+                </div>
+        </div>
+        <div class="col-lg-3">
+
+        </div>
+      </div>
+  <div class="row">
+    <div class="col-lg-6">
+                <div class="card" style="text-align: center;padding: 3%;"  >
+                  <div class="card-body">
+                    <h3>Mentor Meet</h3>
+                    <h6 style="padding: 2%;">Meeting Record</h6>
+                      <a href="/meetdetails/{{outputid}}" style="padding: 3%;"><button class="btn btn-danger btn-lg ">View</button></a>
+                  </div>
+                </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card" style="text-align: center;padding: 3%;">
+                  <div class="card-body">
+                    <h3>Mentor Meet</h3>
+                    <h6 style="padding:2%;">Add New Meeting</h6>
+                      <a href="/newmeet/{{outputid}}" style="padding: 3%;"><button class="btn btn-danger btn-lg">Fill Details</button></a>
+                  </div>
+           </div>
+      </div>
+      </div>
+  </div>
